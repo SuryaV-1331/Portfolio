@@ -1,0 +1,135 @@
+@media screen and (max-width:1200px) {
+
+
+
+    #desktop-nav{
+        display: none;
+    }
+
+    #mobile-nav{
+        display: flex;
+    }
+
+    section{
+        margin: 0;
+    }
+
+    #desktop-nav {
+        display: none;
+      }
+
+    
+    #hamburger-nav {
+        display: flex;
+    }
+      
+    #experience,
+    .experience-details-container {
+        margin-top: 2rem;
+    }
+    
+    .technology-icon-container{
+        height: fit-content;
+    }
+
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 60vh;
+    }
+
+    #profile{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        height: fit-content;
+        margin: 0;
+    }
+
+    section {
+        margin: 2rem 10%;
+    }
+
+    #contact{
+        height: 30vh;
+        margin: 0;
+    }
+
+    .contact-info-container{
+        padding: 0%;
+        margin: 0rem;
+    }
+
+    .contact-info-upper-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project{
+        width: 300px;
+        height: fit-content;
+    }
+
+    section,
+    .section-container {
+      height: fit-content;
+      justify-content: center;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+
+    .details-container{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
+
+    .profile-pic{
+        height: 200px;
+        width: 200px;
+    }
+
+    .profile-content{
+        margin-top: 2rem;
+    }
+
+    .profile-text p {
+        font-weight: 600;
+    }
+    
+    .profile-text1{
+        text-align: center;
+        color: gray;
+    }
+    
+    .profile-text2 {
+        font-size: 1rem;
+        color: gray;
+        margin-bottom: 1rem;
+    }
+
+    .title{
+        font-size: 1.5rem;
+    }
+
+    p{
+        gap: 0;
+
+    }
+
+    #image{
+        height: 200px;
+    }
+
+    .section-container2{
+        display: grid;
+    }
+
+}

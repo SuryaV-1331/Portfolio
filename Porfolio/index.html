@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Surya V</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="mobile-nav">
+        <div class="logo">Surya V</div>
+        <div class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div>
+                <ul class="mobile-nav-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id = "profile">
+        <div class = "profile-pic">
+            <img src="Assets/profile-pic.jpg" alt="Surya-profile-pic" id="image"/>
+        </div>
+        <div class="profile-content">
+        <div class="profile-text">
+            <p class="profile-text1">Hello, I'm</p>
+            <h1 class="title">Surya V</h1>
+            <p class="profile-text2">Frontend Developer</p>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-color-1" 
+            onclick="window.open('/Assets/Surya Resume.pdf')">Download CV</button>
+            <button class="btn btn-color-2" 
+            onclick="location.href='/#contact'">Contact Info</button>
+        </div>
+        <div class="icon-container">
+            <img src="./Assets/linkedin.png" class="icon" alt="My LinkedIn"
+            onclick="location.href='https://www.linkedin.com/in/surya-v-371a46263/'">
+            <img src="./Assets/leetcode.png" class="icon" alt="My Leetcode Profile"
+            onclick="location.href=' https://leetcode.com/surya_v07/'">
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="profile-text1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container2" id="about-containers">
+            <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>B.E. Electronics and Communication Engineering</p>
+            </div>
+            <div class="text-container"><p>I'm Surya V, currently pursuing my Bachelor's degree in Electronics and Communication Engineering
+                 at Karpagam Institute of Technology.I've cultivated foundational skills in Python, Java, Web Development. Furthermore,
+                  my journey includes participation as a finalist in the Smart India Hackathon Grand Finale of 2023. 
+                Beyond my technical pursuits, I'm also a proficient artist, engaged in creating captivating artworks as a freelance endeavor.</p> 
+            </div>  
+        </div>
+    </section>
+    <section id="skills">
+        <p class="profile-text1">Explore</p>
+        <h1 class="title" id="title2">Technologies</h1>
+        <div class="section-container">
+            <div class="technology-icon-container">
+                <img src="./Assets/html.png" class="technology-icon" alt="html-logo">
+                <h5 class="icon-text">Experienced</h5>
+            </div>
+            <div class="technology-icon-container">
+                <img src="./Assets/css.png" class="technology-icon" alt="css-logo">
+                <h5 class="icon-text">Experienced</h5>
+            </div>
+            <div class="technology-icon-container">
+                <img src="./Assets/js.png" class="technology-icon" alt="js-logo">
+                <h5 class="icon-text">Basic</h5>
+            </div>
+            <div class="technology-icon-container">
+                <img src="./Assets/logo-mysql-26300.png" class="mysql-logo" alt="mysql-logo">
+                <h5 class="icon-text" id="icon-text">Basic</h5>
+            </div>
+        </div>
+    </section>
+    <section id="programming-languages">
+        <h1 class="title" id="title2">Programming Languages</h1>
+        <div class="lang-container">
+            <div class="about-containers">
+                <div class="article-container">
+                  <article class="details-container">
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Python</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article class="details-container">
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Java</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                </div>
+            </div>
+
+    </section>
+    <section id="projects">
+        <p class="profile-text1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="section-container">
+            <div class="project">
+                <div class="project-logo-container">
+                    <img src="/Assets/project1.png" class="project-img" alt="my-project">
+                </div>
+                <div class="project-description">
+                    <h1 class="title2">Low-cost Smart Board</h1>
+                    <p class="description">Develop a state-of-the-art Smart Board system that revolutionizes classroom interaction.
+                        Our innovative solution incorporates an IR pen and IR glove to facilitate seamless
+                        communication between students and teachers. One of the main advantages is its ability to
+                        transform any flat surface into a dynamic and interactive whiteboard, providing an
+                        unparalleled learning experience.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-logo-container">
+                    <img src="/Assets/project2.png" class="project-img" alt="my-project">
+                </div>
+                <div class="project-description">
+                    <h1 class="title2">Sigma Autos- Car Dealer Webpage </h1>
+                    <p class="description">Developed a car dealer website which allows the user to browse and search for vehicles,
+                        view vehicles detailed information. The website is a comprehensive platform designed to provide users
+                         with a seamless browsing experience. Each vehicle listing includes detailed information 
+                         such as specifications,
+                         features, pricing, and high-quality images to help users make informed decisions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <p class="profile-text1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:suryavishalanand@gmail.com">suryavishalanand@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/surya-v-371a46263/">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p class="Copyright">Copyright &#169; 2024 Surya V. All Rights Reserved.</p>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>

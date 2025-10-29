@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 8%;
+    --foreground: 180 100% 90%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 180 100% 90%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 180 100% 90%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 26% 8%;
+    --primary-glow: 180 100% 60%;
+
+    --secondary: 270 100% 65%;
+    --secondary-foreground: 220 26% 8%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 180 20% 60%;
+
+    --accent: 270 100% 65%;
+    --accent-foreground: 220 26% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.5rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(180, 100%, 50%), hsl(270, 100%, 65%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(180, 100%, 15%), hsl(220, 26%, 8%));
+    --gradient-mesh: radial-gradient(at 40% 20%, hsla(180, 100%, 30%, 0.3) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsla(270, 100%, 40%, 0.2) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsla(180, 100%, 20%, 0.2) 0px, transparent 50%);
+    --shadow-neon: 0 0 20px hsla(180, 100%, 50%, 0.3);
+    --shadow-neon-strong: 0 0 40px hsla(180, 100%, 50%, 0.5);
+    --shadow-purple: 0 0 20px hsla(270, 100%, 65%, 0.3);
+    --glow-cyan: 0 0 10px hsla(180, 100%, 50%, 0.5), 0 0 20px hsla(180, 100%, 50%, 0.3);
+    --glow-purple: 0 0 10px hsla(270, 100%, 65%, 0.5), 0 0 20px hsla(270, 100%, 65%, 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+
+  .shadow-neon-strong {
+    box-shadow: var(--shadow-neon-strong);
+  }
+
+  .shadow-purple {
+    box-shadow: var(--shadow-purple);
+  }
+
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px hsla(180, 100%, 50%, 0.5);
+    }
+    to {
+      text-shadow: 0 0 20px hsla(180, 100%, 50%, 0.8), 0 0 30px hsla(270, 100%, 65%, 0.4);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
